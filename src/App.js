@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          I tierd from React.shit.js.ts.py
+        Madafukcer
         </p>
         <a
           className="App-link"
