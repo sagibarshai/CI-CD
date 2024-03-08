@@ -8,3 +8,16 @@ before_install:
 
 script:
   - docker run -e CI=true 315426346/cicd npm run test
+
+# travis ci know how to handle with many providers like elasticbeanstalk
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "frontend"
+  env: "Frontend-env"
+  bucket_name: elasticbeanstalk-us-east-1-995604946987
+  bucket_path: "frontend"
+  on:
+    branch: main
+  access_key_id: $aws-access_key
+  access_key_id: "$aws_secret_key"
