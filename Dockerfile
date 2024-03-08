@@ -7,4 +7,6 @@ RUN npm run build
 
 
 FROM nginx
+# elasticbeanstalk will look for the EXPOSE to know what port to EXPOSE
+EXPOSE 80 
 COPY --from=builder /usr/app/build /usr/share/nginx/html
