@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-        Madafukcer
+     check if change ?? 
         </p>
         <a
           className="App-link"
@@ -14,7 +14,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Madafukcer
+       check if change ?? 
         </a>
       </header>
     </div>
