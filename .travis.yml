@@ -1,15 +1,10 @@
 sudo: required
 services:
   - docker
-
 before_install:
   - docker build -t 315426346/cicd:latest -f Dockerfile.dev . 
-  
-
 script:
   - docker run -e CI=true 315426346/cicd npm run test
-
-# travis ci know how to handle with many providers like elasticbeanstalk
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
@@ -17,7 +12,11 @@ deploy:
   env: "Frontend-env"
   bucket_name: elasticbeanstalk-us-east-1-995604946987
   bucket_path: "frontend"
+  dockerfile: Dockerfile
   on:
     branch: main
   access_key_id: $aws_access_key
   secret_access_key: "$aws_secret_key"
+
+
+# travis ci know how to handle with many providers like elasticbeanstalk
